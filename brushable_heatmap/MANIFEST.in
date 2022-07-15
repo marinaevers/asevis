@@ -1,0 +1,11 @@
+include brushable_heatmap/brushable_heatmap.min.js
+include brushable_heatmap/brushable_heatmap.min.js.map
+include brushable_heatmap/async-*.js
+include brushable_heatmap/async-*.js.map
+include brushable_heatmap/*-shared.js
+include brushable_heatmap/*-shared.js.map
+include brushable_heatmap/metadata.json
+include brushable_heatmap/package-info.json
+include README.md
+include LICENSE
+include package.json
