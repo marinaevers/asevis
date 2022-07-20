@@ -39,8 +39,6 @@ def createAnimation(data, idx, indexRange):
                         xaxis = {"visible" : False},
                         yaxis = {"visible" : False}
                     ))
-    #fig.update_xaxes(range=[0, 10], zeroline=False)
-    #fig.update_yaxes(range=[1.9, 9.1])
     fig.update_yaxes(
         scaleanchor="x",
         scaleratio=1,

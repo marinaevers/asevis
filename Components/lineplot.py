@@ -22,5 +22,3 @@ def createLineplot(data, idx, indexRange):
         size=data.fontSize
     ))
     return lineplot
-
-# $$tB_1/R$$

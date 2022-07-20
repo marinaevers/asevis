@@ -3,7 +3,6 @@
 # Run this app with `python app.py` and
 # visit http://127.0.0.1:8050/ in your web browser.
 
-# import Components.brushable_heatmap.brushable_heatmap as brushable_heatmap
 import dash
 import dash.dcc as dcc
 import dash.html as html
@@ -85,8 +84,6 @@ app.layout = html.Div(children=[
                         ], style={'width': '80%', 'display': 'inline-block'})
                     ], className="custom-tab", selected_className="custom-tab--selected"),
                     dcc.Tab(label="Aggregation", value='aggregation', children=[
-                        # Aggregation-measure
-                        # html.H2(children="Aggregation over time measure"),
                         html.Div([
                             html.H3(children="Name: ")
                         ], style={'width': '20%', 'display': 'inline-block'}),
@@ -97,7 +94,7 @@ app.layout = html.Div(children=[
                             html.H3(children="Code: ")
                         ], style={'width': '20%', 'display': 'inline-block', 'vertical-align': 'top'}),
                         html.Div([
-                            dcc.Textarea( # measurePerTimestep(times, trajectory)[0]
+                            dcc.Textarea(
                                 value='def aggregatedMeasure(times, trajectory):\n  print("Aggregation not defined yet")\n  return times[-1]',
                                 id='code-aggregation', style={'width': '100%'}, rows=10)
                         ], style={'width': '80%', 'display': 'inline-block'})
@@ -108,16 +105,6 @@ app.layout = html.Div(children=[
             html.Div([
                 # Heatmap tab
                 html.H1(children="Heatmap"),
-                # brushable_heatmap.BrushableHeatmap(
-                #    id='input',
-                #    value='my-value',
-                #    label='my-label'
-                # ),
-                # html.Div(id='output')
-                # dcc.Graph(
-                #   id='heatmap',
-                #   figure=createHeatmap(data, idxRange)
-                # )
                 bh.BrushableHeatmap(
                     data=createHeatmapData(data, idxRange),  # dataTest,#
                     id='heatmap',

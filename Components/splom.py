@@ -19,11 +19,6 @@ def createSPLOM(data, idx, indexRange, maxComp):
     df = pd.DataFrame(data=pca_data, index=[(""+str(i)) for i in range(len(pca_data))])
     splom = px.scatter_matrix(df,
                               labels={i:(""+str(i)) for i in range(numDim)})
-    # splom = go.Figure(data=go.Splom(
-    #     dimensions=[dict(label=""+str(i),
-    #                      values=df[i]) for i in range(numDim)],
-    #     #mode = 'line'
-    # ))
 
     splom.update_traces(diagonal_visible=False)
     splom.update_layout(template = 'simple_white')

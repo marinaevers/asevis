@@ -58,8 +58,6 @@ def get_continuous_color(colorscale, intermed):
             break
 
     if (low_color[0] == "#") or (high_color[0] == "#"):
-        # some color scale names (such as cividis) returns:
-        # [[loc1, "hex1"], [loc2, "hex2"], ...]
         low_color = hex_to_rgb(low_color)
         high_color = hex_to_rgb(high_color)
 
@@ -90,8 +88,6 @@ def createTimeplot(data, timeRange):
             measurePerTimestep(data.series[s].times[indexRange[0]:indexRange[1]],
                                data.series[s].orientations[:,indexRange[0]:indexRange[1]]).tolist()
         dataDict["Run"]=((indexRange[1]-indexRange[0])*["Beta=" + str(data.series[s].beta) + ", d=" + str(data.series[s].d)])
-        #dataDict["beta"]=((indexRange[1]-indexRange[0])*[data.series[s].beta])
-        #dataDict["d"] = ((indexRange[1]-indexRange[0])*[data.series[s].d])
         if(data.colorTimeplotBy!="Run"):
             if(data.colorTimeplotBy=="d"):
                 color_val_normalized = (data.series[s].d - data.minD)/(data.maxD - data.minD)
@@ -104,11 +100,6 @@ def createTimeplot(data, timeRange):
             fig.add_trace(go.Scatter(x=dataDict["Time"], y=dataDict[data.nameMeasurePerTimestep],
                                      mode='lines', name=dataDict[data.colorTimeplotBy][0]))
 
-    #df = pd.DataFrame(dataDict)
-    #fig = go.Scatter(x=df["Time"], y=df[data.nameMeasurePerTimestep], color=data.colorTimeplotBy,
-    #              color_continuous_scale=px.colors.sequential.Magma)
-        #px.line(df, x="Time", y=data.nameMeasurePerTimestep, color=data.colorTimeplotBy,
-        #          color_continuous_scale=px.colors.sequential.Magma)
     if(data.colorTimeplotBy=="d"):
         minVal = data.minD
         maxVal = data.maxD

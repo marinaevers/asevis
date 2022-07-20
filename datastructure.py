@@ -101,14 +101,7 @@ def loadMap(particleNumber, prefix):
     return T_map
     
 def loadData():
-    #PATH = "/home/m_ever14/Desktop/Debug/"
-    #PATH = "/home/marina/Desktop/Debug"
-    #PATH = "/media/m_ever14/Elements/DataPRX/NewCalculations"
-    PATH = "/media/m_ever14/Seagate Backup Plus Drive/DataPRX/NewCalculations"
-    #PATH = "/media/m_ever14/Elements/DataPRX/"
-    #PATH = "/media/marina/Elements/DataPRX/"
-    #PATH = "/home/marina/Desktop/DataPRX/"
-    #PATH = "/media/marina/Elements/DataPRX/ForVisShortPaper"
+    PATH = "data/"
     NUM = 7
     data = Data()
     data.particleNumber = NUM
