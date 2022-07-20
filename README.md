@@ -12,36 +12,36 @@ If you use our approach, please cite out paper.
 
 ## Requirements
 Create a new virtual environment:
-'''
+```
 python3 -m venv venv
-'''
+```
 Activate the environment:
-'''
+```
 source .venv/bin/activate
-'''
+```
 Install the requirements:
-'''
+```
 pip install -r requirements.txt
-'''
+```
 Make the heatmap locally available:
-'''
+```
 pip install brushable_heatmap/
-'''
+```
 
 ## How to run?
 We included some example data such that the tool can be executed and tested directly.
 In the main folder of the program, execute:
-'''
+```
 python app.py
-'''
+```
 However, it can also be applied to own data. The ensemble data should be placed in a
 folder where each subfolder contains a single ensemble member's data. The parameter 
-values are taken directly from the folder names following the structure <beta>-<d>
+values are taken directly from the folder names following the structure beta-d
 for our example. Each folder should contain one file for each particle that contains
 the orientation of the particle over time. It further contains a file that stores
 the time stamps for the individual particles.
 
-The path to the data is set in the function ''loadData()'' of the file ''datastructure.py''.
+The path to the data is set in the function ``loadData()`` of the file ``datastructure.py``.
 
 ## How to use?
 ### Programming interface
@@ -49,7 +49,7 @@ You can implement your measure using Python. You can use the default function fo
 orientation. Do not change the signature of the function but you can change the
 body freely. You can also import further Python packages.
 
-After you implemented the measure you want to use or to test, click ''Compute'' to
+After you implemented the measure you want to use or to test, click ``Compute`` to
 update the other views.
 
 ### Heatmap
@@ -63,9 +63,9 @@ Alt + Click: Desect selected cells
 ### Animation
 Creating the animation might take some time (depending on the number of time steps).
 Therefore, the animation is not updated automatically. For updating it manually,
-click ''Create animation''.
+click ``Create animation``.
 
-The animation is started by using the ''Play'' button. Using the icons on the top-right
+The animation is started by using the ``Play`` button. Using the icons on the top-right
 of the view, it is also possibe to zoom in and out, pan or take a screenshot.
 
 ### Line Plot and Timeplot
