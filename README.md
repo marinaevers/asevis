@@ -9,6 +9,16 @@ More information can be found in the paper *ASEVis: Visual Exploration of Active
 to Define Characteristic Measures* by Marina Evers, Raphael Wittkowski and Lars Linsen.
 
 If you use our approach, please cite out paper.
+> M. Evers, R. Wittkowski and L. Linsen, "ASEVis: Visual Exploration of Active System Ensembles to Define Characteristic Measures," 2022 IEEE Visualization and Visual Analytics (VIS), 2022, pp. 150-154, doi: 10.1109/VIS54862.2022.00039.
+```
+@INPROCEEDINGS{asevis,
+  author={Evers, Marina and Wittkowski, Raphael and Linsen, Lars},
+  booktitle={2022 IEEE Visualization and Visual Analytics (VIS)}, 
+  title={ASEVis: Visual Exploration of Active System Ensembles to Define Characteristic Measures}, 
+  year={2022},
+  pages={150-154},
+  doi={10.1109/VIS54862.2022.00039}}
+```
 
 ## Requirements
 Create a new virtual environment:
